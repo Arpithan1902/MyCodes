@@ -1,0 +1,77 @@
+package com.sets;
+
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Player implements  {
+private int playerId;
+private String name;
+private String skill;
+
+	public Player(int playerId, String name, String skill) {
+	super();
+	this.playerId = playerId;
+	this.name = name;
+	this.skill = skill;
+}
+
+	public int getPlayerId() {
+	return playerId;
+}
+
+public void setPlayerId(int playerId) {
+	this.playerId = playerId;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public String getSkill() {
+	return skill;
+}
+
+public void setSkill(String skill) {
+	this.skill = skill;
+}
+
+class PlyerBo{
+	Set<Player>setOfPlayer=new TreeSet();
+	public void addPlayer(Player player)
+	{
+		setOfPlayer.add(player);
+	}
+	public Set<Player> getAllPlayer()
+	{
+		return setOfPlayer;
+	}
+	
+}
+}
+
+	public static void main(String[] args) {
+		PlayerBO pbo=new PlayerBO();
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<4;i++)
+		{
+			System.out.println("player id);");
+			int id=Integer.parseInt((sc.nextLine());
+			System.out.println("player name);");
+			String str=sc.nextLine();
+			System.out.println("player skill);");
+			String str2=sc.nextLine();
+			Player p=new Player(id,name,skill);
+			pbo.addPlayer(p);
+			
+			
+			
+		
+
+	}
+
+}

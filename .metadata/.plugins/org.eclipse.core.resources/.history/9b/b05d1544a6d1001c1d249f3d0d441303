@@ -1,0 +1,42 @@
+package com.sets;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class RevenueMain {
+	
+	public static void main(String[] args) {
+		
+		List<String> list1=new ArrayList<>();
+		list1.add("1. Media Rights");
+		list1.add("2. Sponsership");
+		list1.add("3. Ticket sales");
+		list1.add("4. Stall rental");
+		list1.add("5. Prize money");
+		
+
+		
+		
+		
+		for(int i=0;i<50;i++){
+		System.out.println(String.format("%-15s%-15s","Category", "Amount"));
+		System.out.println();
+		
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter revenue category");
+		String revCategory=scanner.nextLine();
+		System.out.println("Do you want to continue(yes/no):");
+		String ans=scanner.nextLine();
+		
+		if(ans=="yes") {
+			
+			
+		}
+			
+			
+			
+		}
+	}
+
+}

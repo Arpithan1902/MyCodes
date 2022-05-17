@@ -1,0 +1,59 @@
+package com.practice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductStreamMain {
+	
+		
+		
+		enum SortMethod
+		{
+			BYPRICE,BYNAME
+		}
+		
+		public static double getTotalCost(List<Product> product)
+		{
+			return product.stream().mapToDouble(Product :: getpCost).sum();
+		}
+		
+		public static Set<Product> getAllProduct(List<Product> product)
+		{
+		return product.stream().filter(m->m.getpCost()>5000.00).map(n->n).collect(Collectors.toSet());
+		}
+		
+		
+		//public Stream<Product> sortProduct(List<Product> listOfProduct,sortMethod sortBy)
+		{
+			
+		}
+		
+		
+		
+		public static void main(String[] args)
+		{
+			Product p1 = new Product();
+			Product p2 = new Product();
+			Product p3 = new Product();
+			Product p4 = new Product();
+			p1.setpName("phone");
+			p2.setpName("laptop");
+			p3.setpName("machine");
+			p4.setpName("ipod");
+			p1.setpCost(2000);
+			p2.setpCost(9000);
+			p3.setpCost(6000);
+			p4.setpCost(4000);
+			List<ProductStream> product = new ArrayList<>();
+			product.add(p4);
+			product.add(p3);
+			product.add(p2);
+			product.add(p1);
+		    getAllProduct(product).forEach(x->System.out.println(x.getpCost()));
+		    System.out.println("Total cost :  "+getTotalCost(product));
+		    
+			
+		}
+
+	}
+}

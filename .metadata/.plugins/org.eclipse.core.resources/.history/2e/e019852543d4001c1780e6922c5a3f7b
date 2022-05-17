@@ -1,0 +1,69 @@
+package com.cg.customer.main;
+
+import java.time.LocalDate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import com.cg.customer.entity.*;
+
+
+public class CustomerOrderMain {
+
+	public static void main(String[] args) {
+
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
+		EntityManager em = factory.createEntityManager();
+		
+		Cart cart = new Cart();
+		
+		Item item1 = new Item();
+		item1.setItemId(31);
+		item1.setItemName("mobile");
+		item1.setItemPrice(34003.00);
+		item1.setCart(cart);
+		cart.addItem(item1);
+		
+		Item item2 = new Item();
+		item2.setItemId(32);
+		item2.setItemName("Laptops");
+		item2.setItemPrice(6400.00);
+		item2.setCart(cart);
+		cart.addItem(item2);
+		
+		
+		Customer customer = new Customer();
+		customer.setCustomerName("Arpithan");
+		customer.setEmail("arpin@gmail.com");
+		customer.setPhone(1238456);
+		customer.setCustomerAddress("Kolardist");
+
+		Order order = new Order();
+		order.setOrderId(13);
+		order.setOrderName("m.biriyani");
+		order.setOrderType("nn.veg");
+		order.setOrderDate(LocalDate.now());
+		
+		
+		customer.setOrder(order);
+
+		Address address = new Address();
+		address.setCity("Pudne");
+		address.setCountry("INdDIA");
+		address.setPinCode("6772882");
+		address.setState("MsH");
+		
+		customer.setAddress(address);
+		
+		em.getTransaction().begin();
+		em.persist(cart);
+		em.persist(customer);
+		em.getTransaction().commit();
+
+	}
+
+}
+
+

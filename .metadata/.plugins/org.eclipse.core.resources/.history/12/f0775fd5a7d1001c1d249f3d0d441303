@@ -1,0 +1,69 @@
+package com.sets;
+
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class RevenueMain {
+
+	public static void main(String[] args) {
+		TreeSet<Revenue> set = new TreeSet<>();
+		String revCategory = "";
+		int amount = 0;
+
+		Revenue revenue = new Revenue(revCategory, amount);
+		Scanner scanner = new Scanner(System.in);
+		String b = null;
+		do {
+			System.out.println("Enter revenue revCategory");
+			revCategory = scanner.nextLine();
+
+			if (revCategory.equalsIgnoreCase("Sponsorship")) {
+				System.out.println("Enter revenue amount");
+				amount = Integer.parseInt(scanner.nextLine());
+				set.add(revenue);
+			} else if (revCategory.equalsIgnoreCase("Media rights")) {
+				System.out.println("Enter revenue amount");
+				amount = Integer.parseInt(scanner.nextLine());
+				set.add(revenue);
+			} else if (revCategory.equalsIgnoreCase("Ticket sales")) {
+				System.out.println("Enter revenue amount");
+				amount = Integer.parseInt(scanner.nextLine());
+				set.add(revenue);
+			} else if (revCategory.equalsIgnoreCase("Stall rental")) {
+				System.out.println("Enter revenue amount");
+				amount = Integer.parseInt(scanner.nextLine());
+				set.add(revenue);
+			} else if (revCategory.equalsIgnoreCase("Prize money")) {
+				System.out.println("Enter revenue amount");
+				amount = Integer.parseInt(scanner.nextLine());
+				set.add(revenue);
+			}
+
+			else {
+				System.out.println("Invalid Output");
+			}
+			System.out.println("Do you want to continue(yes/no):");
+			b = sc.nextLine();
+
+		}
+
+		while (b.equalsIgnoreCase("yes"));
+
+		if (b.equalsIgnoreCase("no")) {
+
+			Iterator<Revenue> i = set.iterator();
+			while (i.hasNext()) {
+				Revenue revenue2 = i.next();
+				System.out.println(revenue2.getRevenueCategory() + " " + revenue2.getAmount());
+
+			}
+			int total = 0;
+			for (Revenue revenue3 : set) {
+				total = total + revenue3.getAmount();
+			}
+			System.out.println("Total amount earned: " + total);
+		}
+
+	}
+}

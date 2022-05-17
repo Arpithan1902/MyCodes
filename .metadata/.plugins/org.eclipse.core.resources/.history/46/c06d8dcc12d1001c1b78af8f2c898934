@@ -1,0 +1,29 @@
+package com.sets;
+
+import java.util.Scanner;
+
+
+
+public class RevenueMain {
+	
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		
+		
+		for(int i=0;i<50;i++){
+		System.out.println(String.format("%-15s%-15s","Category", "Amount"));
+		System.out.println("Enter revenue category");
+		String revCategory=scanner.nextLine();
+		System.out.println("Do you want to continue(yes/no):");
+		String ans=scanner.nextLine();
+		
+		if(ans=="yes") {
+			
+		}
+			
+			
+			
+		}
+	}
+
+}

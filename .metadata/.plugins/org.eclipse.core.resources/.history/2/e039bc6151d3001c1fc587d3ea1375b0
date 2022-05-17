@@ -1,0 +1,5 @@
+package com.cg.address.model;
+
+public class Address {
+
+}

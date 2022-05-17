@@ -1,0 +1,5 @@
+package com.cg.ordercust.model;
+
+public class Address {
+
+}

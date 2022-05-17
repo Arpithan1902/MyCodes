@@ -1,0 +1,11 @@
+package com.practice;
+
+
+	enum SortMethod{
+		BYNAME,BYSALARY
+		
+	}
+	public class LambdaDemo {
+		public Stream<Product>getSortedProduct(List<Product> listOfProducts,)
+
+}

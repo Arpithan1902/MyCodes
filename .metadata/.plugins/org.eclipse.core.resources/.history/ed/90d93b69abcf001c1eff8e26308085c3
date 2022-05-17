@@ -1,0 +1,93 @@
+package com.practice;
+
+
+	import java.util.ArrayList;
+	import java.util.Collection;
+	import java.util.List;
+	import java.util.Set;
+	import java.util.function.Predicate;
+	import java.util.stream.Collectors;
+	import java.util.stream.Stream;
+
+	public class StreamDemo1 {
+		
+		//method defination
+		//defined
+		public static Stream<Integer> changeIntoStream(List<Integer> numbers)
+		{
+			//code we will write here
+			//{10,40,60,50,80,30}
+			Stream<Integer> streamOfNumber=   numbers.stream();
+			return streamOfNumber;
+		}
+		
+		public static Set<Integer> filerNumbersIntoSet(List<Integer> number)
+		{
+			//in which basis we have to filter
+			//we have to if the number is less then 35.
+			//using stream api we have to implement this
+			
+	Set<Integer> set1=	number.stream().filter(num->num>=35).map(n->n).collect(Collectors.toSet());
+		return set1;	
+		}
+		
+		public int countPassNumberForMarksList(List<Integer> numbers)
+		{
+			//we have filer marks based on >=60 
+			//we have to count the number of passed students
+			//long count()
+			// int variable=long value;
+			
+			
+			int totalCountOfPassStudent=(int)numbers.stream().filter(num->num>=60).map(num->num).count();
+			return totalCountOfPassStudent;
+			
+		}
+		
+		public static  List<Integer> addGraceMarks(List<Integer> marks)
+		{
+			//if the marks is >=55 then add 5 marks as grace marks and retun the list of marks
+			
+		}
+		
+		public static int getMaxMarks(Collection<Integer> marks)
+		{
+			
+		//return the highest marks	
+		}	
+		
+		
+		public static List<Integer> sortMarks(List<Integer> marks)
+		{
+			
+		
+		
+	    		
+			
+		}
+		
+		
+		
+		
+
+		public static void main(String[] args) {
+
+
+			//code write here..
+		List<Integer> listOfNumber=new ArrayList();
+		listOfNumber.add(10);
+		listOfNumber.add(1);
+		listOfNumber.add(70);
+		listOfNumber.add(100);
+		//Since the method is static we can call dircetly by using method name
+	Stream<Integer> s=	 changeIntoStream(listOfNumber);
+	s.forEach(n->System.out.println(n));
+		
+		
+		
+			
+
+		}
+
+
+}

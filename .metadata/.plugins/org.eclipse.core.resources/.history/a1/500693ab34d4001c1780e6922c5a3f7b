@@ -1,0 +1,80 @@
+package com.cg.customer.main;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.cart.main.Customer;
+import com.cart.main.Order;
+import com.cg.customer.entity.*;
+
+
+public class CustomerOrderMain {
+
+	public static void main(String[] args) {
+
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
+		EntityManager em = factory.createEntityManager();
+		
+		Cart cart = new Cart();
+		
+		Item item1 = new Item();
+		item1.setItemId(4);
+		item1.setItemName("atcsh");
+		item1.setItemPrice(40030.00);
+		item1.setCart(cart);
+		cart.addItem(item1);
+		
+		Item item2 = new Item();
+		item2.setItemId(4);
+		item2.setItemName("Ladptop");
+		item2.setItemPrice(64000.00);
+		item2.setCart(cart);
+		cart.addItem(item2);
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter date in yyyy-MM-dd format");
+		// 2022-05-12
+		// gopal
+
+		String dateofOrder = scanner.nextLine();
+		// parse(String dateinput)
+		// parse(String dateInput, dateformat)
+
+		//LocalDate localDate1=LocalDate.parse(dateofOrder,
+		DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate localDate1 = LocalDate.parse(dateofOrder);
+
+		Customer customer = new Customer();
+		customer.setCustomerName("arsha");
+		customer.setEmail("amsist@gmail.com");
+		customer.setPhone(68320063);
+		
+		
+		
+		Order order = new Order();
+		order.setOrderDate(localDate1);
+		customer.setOrder(order);
+		Address address = new Address();
+//		address.setCity("Pudne");
+//		address.setCountry("INdDIA");
+//		address.setPinCode("6772882");
+//		address.setState("MsH");
+		//address.setCustomer(customer);
+
+		customer.setAddress(address);
+		
+		em.getTransaction().begin();
+		em.persist(customer);
+		em.getTransaction().commit();
+
+	}
+
+}
+
+

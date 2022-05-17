@@ -1,0 +1,9 @@
+package com.newclass;
+
+public class Snippet {
+	•	int isbnno
+	•	String bookName
+	•	String author
+	
+}
+

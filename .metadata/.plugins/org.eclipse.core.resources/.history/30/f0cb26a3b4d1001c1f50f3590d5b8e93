@@ -1,0 +1,37 @@
+package com.map;
+
+public class EmpDetails {
+	private int empId;
+	private String Designation; 
+	private int salary;
+	
+	
+	public EmpDetails(int empId, String designation, int salary) {
+		super();
+		this.empId = empId;
+		this.Designation = designation;
+		this.salary = salary;
+	}
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getDesignation() {
+		return Designation;
+	}
+	public String setDesignation(String designation) {
+		return Designation = designation;
+		
+	}
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	
+	
+
+}

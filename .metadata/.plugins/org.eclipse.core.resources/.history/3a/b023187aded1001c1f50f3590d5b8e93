@@ -1,0 +1,54 @@
+package com.strings;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class VowelString {
+	
+	
+	public static int testVowel(String string2) {
+		
+		VowelString vs=new VowelString();
+		for (int i = 0; i < string2.length(); i++) {
+			vs.add(string2.charAt(i));
+			}
+			if (vs.size() == 5) {
+			System.out.println("yes");
+			return 1;
+			} else {
+			System.out.println("No");
+			}
+		
+		
+		
+		
+		return 0;
+		
+	}
+	
+	
+	private int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	private void add(char charAt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public static void main(String args[]) {
+	Scanner scanner=new Scanner(System.in);
+	String string=scanner.nextLine();
+	String string2 = string.replaceAll("[^aeiouAEIOU]", "");
+	System.out.println(string2);
+	
+	
+	
+	
+	}
+	
+
+}

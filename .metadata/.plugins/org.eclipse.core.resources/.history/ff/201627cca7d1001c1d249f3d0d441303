@@ -1,0 +1,85 @@
+package com.sets;
+
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class RevenueMain {
+	
+	public static void main(String[] args) {
+		TreeSet<Revenue> set = new TreeSet<>();
+     Scanner sc = new Scanner(System.in);
+     String b=null;
+		do
+		{
+			System.out.println("Enter revenue category");
+			  String category = sc.nextLine();
+           if(category.equalsIgnoreCase("Sponsorship"))
+           {
+        	   System.out.println("Enter revenue amount");
+        		int amt = Integer.parseInt(sc.nextLine());
+        		Revenue rv = new Revenue(category,amt);
+        		set.add(rv);
+           }
+           else if(category.equalsIgnoreCase("Media rights"))
+           {
+        	   System.out.println("Enter revenue amount");
+       		int amt = Integer.parseInt(sc.nextLine());
+       		Revenue rv = new Revenue(category,amt);
+       		set.add(rv);
+           }
+           else if(category.equalsIgnoreCase("Ticket sales"))
+           {
+        	   System.out.println("Enter revenue amount");
+       		int amt = Integer.parseInt(sc.nextLine());
+       		Revenue rv = new Revenue(category,amt);
+       		set.add(rv);
+           }
+           else if(category.equalsIgnoreCase("Stall rental"))
+           {
+        	   System.out.println("Enter revenue amount");
+       		int amt = Integer.parseInt(sc.nextLine());
+       		Revenue rv = new Revenue(category,amt);
+       		set.add(rv);
+           }
+           else if(category.equalsIgnoreCase("Prize money"))
+           {
+        	   System.out.println("Enter revenue amount");
+       		int amt = Integer.parseInt(sc.nextLine());
+       		Revenue rv = new Revenue(category,amt);
+       		set.add(rv);
+           }
+			
+           else
+           {
+        	   System.out.println("Invalid Output");
+           }
+          System.out.println("Do you want to continue(yes/no):"); 
+           b = sc.nextLine();
+			
+		}
+		//String b = sc.nextLine();
+	  while(b.equalsIgnoreCase("yes"));
+		
+		if(b.equalsIgnoreCase("no"))
+		{
+			
+			Iterator<Revenue> i = set.iterator();
+			while(i.hasNext())
+			{
+				Revenue rrr = i.next();
+				System.out.println(rrr.getRevenueCategory()+" "+rrr.getAmount());
+				
+			}
+			int total=0;
+			for(Revenue rr : set)
+			{
+				total=total+rr.getAmount();
+			}
+			System.out.println("Total amount earned: "+total);
+		}
+         		
+		
+		
+	}
+}

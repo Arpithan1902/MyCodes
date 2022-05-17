@@ -1,0 +1,24 @@
+package com.map;
+
+import java.util.HashMap;
+
+class EmpDetailsaMain{
+	
+	public static void main(String[] args) {
+		
+	HashMap<Integer,String> hashmap=new HashMap<Integer,String>();
+	hashmap.put(101, "Manager");
+	hashmap.put(102, "Programmer");
+	hashmap.put(103, "Analyst");
+	System.out.println(hashmap);
+	
+	HashMap<Integer,Integer> hashmap2=new HashMap<>();
+	hashmap2.put(101, 50000);
+	hashmap2.put(102, 40000);
+	hashmap2.put(103, 30000);
+	System.out.println(hashmap2);
+	
+	
+	}
+	
+	}

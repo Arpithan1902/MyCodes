@@ -1,0 +1,24 @@
+package com.streams;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.stream.bean.Employee;
+
+public class EmployeeMain {
+	
+	public static void main(String[] args) {
+		Employee emp1 = new Employee(101, "aaaa",1,"active",20000);
+		Employee emp2 = new Employee(102, "ddd",2,"active",20000);
+		Employee emp3 = new Employee(103, "bbb", 3,"active",20000);
+		Employee emp4 = new Employee(104, "bbb", 4,"active",20000););
+	
+		List<Employee> employees = new ArrayList<>();
+		employees.add(emp4);
+		employees.add(emp3);
+		employees.add(emp2);
+		employees.add(emp1);
+
+
+}}

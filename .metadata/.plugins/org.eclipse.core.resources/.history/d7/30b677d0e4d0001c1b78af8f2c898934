@@ -1,0 +1,44 @@
+package com.sets;
+
+public class Player {
+private int playerId;
+private String name;
+private String skill;
+
+	public TestSetDemo5(int playerId, String name, String skill) {
+	super();
+	this.playerId = playerId;
+	this.name = name;
+	this.skill = skill;
+}
+
+	public int getPlayerId() {
+	return playerId;
+}
+
+public void setPlayerId(int playerId) {
+	this.playerId = playerId;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public String getSkill() {
+	return skill;
+}
+
+public void setSkill(String skill) {
+	this.skill = skill;
+}
+public void addPlayer(Test)
+	public static void main(String[] args) {
+		
+
+	}
+
+}

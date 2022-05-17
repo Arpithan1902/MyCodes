@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ecom.dao.productDao&apos; to &apos;ProductDao&apos;&#x0D;&#x0A;- Original project: &apos;Class_Practice_EcomMap&apos;&#x0D;&#x0A;- Original element: &apos;com.ecom.dao.productDao&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ecom.dao.ProductDao&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;productDao&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.ecom.dao{productDao.java[productDao" matchStrategy="1" name="ProductDao" qualified="false" references="true" similarDeclarations="false" stamp="1650860008559" textual="false" version="1.0"/>
+</session>
